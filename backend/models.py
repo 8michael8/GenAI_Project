@@ -8,7 +8,7 @@ Base = declarative_base()
 
 class Title(Base):
     __tablename__ = 'title'
-    id = Column(Integer, primary_key=True)
+    id = Column(Text, primary_key=True)
     title = Column(Text, nullable=False)
     content = Column(Text, nullable=False)
     citation = Column(Text, nullable=False)
