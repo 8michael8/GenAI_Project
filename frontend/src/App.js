@@ -39,39 +39,39 @@ function App() {
         }
     }
 
-  return (
-      <div className = "chatBot">
-          <div className = "chat">
-                  <div className = "messages">
-                      {messages.map((m, i) => (
-                          <div key = {i} className = {`message ${m.sender}`}>
-                              <h3>{m.title}</h3>
-                              <p className = "message_output">{m.text}</p>
-                              {m.sender === "user" && (
-                                  <p className = "out_notice">Here's What I can Find:</p>
-                              )}
-                              {m.sender === "bot" && (
-                                  <a href={m.citation} target="_blank" rel="noreferrer">
-                                      CITATION
-                                  </a>
-                              )}
-                          </div>
-                      ))}
-                  </div>
-              <div className = "questionSearch">
-                  <form onSubmit={handleSubmit} className = "search_bar">
-                      <input
-                          type = "text"
-                          value = {question}
-                          onChange ={(e) => setQuestion(e.target.value)}
-                          placeholder = "What Would You Like to Know about Washington State Legislature?"
-                      />
-                      <button type = "submit">SUBMIT</button>
-                  </form>
-              </div>
-          </div>
-      </div>
-  );
+    return (
+        <div className = "chatBot">
+            <div className = "chat">
+                <div className = "messages">
+                    {messages.map((m, i) => (
+                        <div key = {i} className = {`message ${m.sender}`}>
+                            <h3>{m.title}</h3>
+                            <p className = "message_output">{m.text}</p>
+                            {m.sender === "user" && (
+                                <p className = "out_notice">Here's What I can Find:</p>
+                            )}
+                            {m.sender === "bot" && (
+                                <a href={m.citation} target="_blank" rel="noreferrer">
+                                    CITATION
+                                </a>
+                            )}
+                        </div>
+                    ))}
+                </div>
+                <div className = "questionSearch">
+                    <form onSubmit={handleSubmit} className = "search_bar">
+                        <input
+                            type = "text"
+                            value = {question}
+                            onChange ={(e) => setQuestion(e.target.value)}
+                            placeholder = "What Would You Like to Know about Washington State Legislature?"
+                        />
+                        <button type = "submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

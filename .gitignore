@@ -31,3 +31,5 @@ bin/
 ### MISC ###
 .idea/
 .GenAI Project.iml
+
+/backend/.env
