@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chatBot {
+  place-items: center;
+  background-color: #3c3c3c;
+  color: #eeeeee;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 80vh;
+  background-color: #1B1B1B;
+  border: 2px solid #8B8B8B;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.questionSearch form {
+  display: flex;
+  gap: 1rem;
+}
+
+.questionSearch {
+  position: absolute;
+  bottom: 30px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  width: 90%;
+}
+.questionSearch input {
+  width: 525px;
+  padding: 10px;
+  font-size: 16.5px;
+  color: #eeeeee;
+  background-color: #2b2b2b;
+  border: 2px solid #8B8B8B;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.questionSearch button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #eeeeee;
+  background-color: #5c5c5c;
+  border: none;
+  border-radius: 4px;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.questionSearch button:hover {
+  background-color: #6d6d6d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messages {
+  overflow-y: auto;
+  margin: 0px 30px 60px 30px;
+}
+
+.message.user {
+  color: #AFDDFF;
+}
+
+.out_notice {
+  color: red;
+  margin-top: 20px;
+}
+
+.message_output {
+  white-space: pre-wrap;
+  margin-top: 10px;
+}
+h3 {
+  margin-top: 20px;
 }

@@ -51,7 +51,7 @@ for t in filtered:
             db.add(title)
             print(f"Inserting {section_id} – {heading}")
             db.commit()
-            print("  ✔ done")
+            print("done")
             db.close()
 
 

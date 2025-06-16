@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Text, create_engine
+from sqlalchemy import Column, Text, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from pgvector.sqlalchemy import Vector
@@ -15,8 +15,8 @@ class Title(Base):
 
 class ContentEmbedding(Base):
     __tablename__ = 'content_embedding'
-    law_id = Column(Integer, primary_key=True)
-    #embedding = Column(Vector(1536))
+    law_id = Column(Text, primary_key=True)
+    embedding = Column(Vector(1536))
 
 engine = create_engine(os.getenv('DATABASE_URL'))
 session = sessionmaker(bind=engine)
