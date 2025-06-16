@@ -3,6 +3,9 @@ from models import engine
 import openai
 import os
 from sqlalchemy import text
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPEN_API_KEY")
